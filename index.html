@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/font-awesome.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="container py-4">
+      <h1 class="text-center mb-5"><span>Bookmarker</span></h1>
+      <form class="py-3">
+        <fieldset>
+          <legend class="text-center mb-4">
+            <span class="legend">
+              <i class="fa-solid fa-bookmark"></i>
+              <span>Bookmark your favorite sites</span>
+              <i class="fa-solid fa-bookmark"></i>
+            </span>
+          </legend>
+          <label for="siteName" class="form-label fw-medium">
+            <i class="fa-solid fa-book-bookmark me-2"></i>
+            <span>Site Name</span></label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="siteName"
+            placeholder="Bookmark Name"
+            autofocus
+            required
+          />
+          <label for="siteUrl" class="form-label fw-medium mt-4">
+            <i class="fa-solid fa-link me-2"></i><span>Site URL</span>
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="siteUrl"
+            placeholder="Website URL"
+            required
+          />
+        </fieldset>
+        <div class="text-center mt-4">
+          <button type="button" id="submitButton">Submit</button>
+        </div>
+      </form>
+      <table class="my-4 w-100 text-center">
+        <thead>
+          <tr>
+            <th class="w-0">Inedx</th>
+            <th class="text-start">Website Name</th>
+            <th colspan="2" class="w-0">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+    <script src="./js/font-awesome.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

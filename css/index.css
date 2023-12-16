@@ -1,0 +1,212 @@
+/*
+==============================
+  CONTENT
+==============================
+  01- Custom Properties
+  02- Reset Styles
+    02.01- Body
+    02.02- Buttons
+    02.03- Bootstrap
+      02.03.01- Form Control
+  03- Utility Classes
+    03.01- Width 0px
+  04- Main Styles
+    04.01- Header
+    04.02- Form
+    04.03- Table
+*/
+
+/* ==============================
+  01- Custom Properties
+============================== */
+:root {
+  --primary-color: #fec260;
+  --primary-border-color: #d99c39;
+  --primary-shade-color: #fec26055;
+}
+
+/* ==============================
+  02- Reset Styles
+============================== */
+
+/* 02.01- Body
+============================== */
+body {
+  color: white;
+  background-color: black;
+}
+
+/* 02.02- Buttons
+============================== */
+
+button {
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: color 300ms, background-color 300ms;
+  padding: 0.5rem 3rem;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+}
+
+form button {
+  color: white;
+  border-color: var(--primary-border-color);
+}
+
+button.good {
+  background-color: lightgreen;
+}
+
+button.bad {
+  background-color: rgb(255, 78, 78);
+}
+
+button:hover {
+  color: var(--primary-color);
+  background-color: black;
+}
+
+form button:hover {
+  color: black;
+  background-color: transparent;
+}
+
+form button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  background-color: var(--primary-color);
+  transition: right 300ms;
+  z-index: -1;
+}
+
+form button:hover::before {
+  right: 0;
+}
+
+/* 02.03- Bootstrap
+============================== */
+
+/* ========== 02.03.01- Form Control ========== */
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.25rem var(--primary-shade-color);
+  border-color: var(--primary-border-color);
+}
+
+/* ==============================
+  03- Utility Classes
+============================== */
+
+/* 03.01- Width 0px
+============================== */
+.w-0 {
+  width: 0;
+}
+
+/* ==============================
+  04- Main Content
+============================== */
+
+/* 04.01- Header
+============================== */
+
+h1 > span {
+  letter-spacing: 0px;
+  transition: letter-spacing 300ms;
+}
+
+h1 > span:hover {
+  letter-spacing: 2px;
+}
+
+/* 04.02- Form
+============================== */
+
+form {
+  border-block: 2px white dotted;
+}
+
+legend {
+  word-spacing: 0px;
+  letter-spacing: 0px;
+  transition: letter-spacing 300ms, word-spacing 300ms;
+}
+
+legend:hover {
+  word-spacing: 3px;
+  letter-spacing: 2px;
+}
+
+.legend {
+  background-image: linear-gradient(
+    to right,
+    var(--primary-border-color),
+    var(--primary-color)
+  );
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.legend > svg:first-child {
+  color: var(--primary-border-color);
+}
+
+.legend > svg:last-child {
+  color: var(--primary-color);
+}
+
+label {
+  transition: color 300ms;
+}
+
+label:hover {
+  color: var(--primary-color);
+}
+
+label > svg {
+  transition: scale 300ms;
+}
+
+label:hover > svg {
+  scale: 1.15;
+}
+
+/* 04.03- Table
+============================== */
+
+th,
+td {
+  padding: 0.5rem;
+}
+
+th {
+  transition: background-color 300ms;
+  border-inline: 1px solid black;
+}
+
+th:hover {
+  background-color: var(--primary-color);
+}
+
+thead tr {
+  background-color: var(--primary-border-color);
+  color: black;
+}
+
+tbody tr {
+  border-block: 1px solid var(--primary-color);
+  transition: color 300ms, background-color 300ms;
+}
+
+tbody tr:hover {
+  color: black;
+  background-color: var(--primary-color);
+}
